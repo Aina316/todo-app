@@ -47,3 +47,35 @@ li.completed span
 { 
     background:none; border:none; font-size:1.1rem; cursor:pointer; color:#e53935; 
 }
+/* styles.css */
+.sr-only {
+    position:absolute;
+    left:-9999px; width:1px; height:1px;
+    overflow:hidden;
+  }
+  button:focus,
+  input:focus {
+    outline:3px solid #1e88e5; /* visible focus ring */
+  }
+  #empty-state 
+  { 
+    color:#555; text-align:center; margin-top:1rem; 
+}
+  .hidden       
+  { 
+    display:none; 
+}
+  .filters 
+  {
+    display:flex; gap:.3rem; margin:.5rem 0 1rem;
+  }
+  .filters button
+   {
+    flex:1; padding:.4rem; border:none; border-radius:6px;
+    background:#e0e0e0; cursor:pointer;
+  }
+  .filters .active   
+  { 
+    background:#1e88e5; color:#fff; 
+}
+      
