@@ -1,81 +1,124 @@
-:root 
-{ 
-    font-family: system-ui, sans-serif; 
+:root {
+  font-family: system-ui, sans-serif;
 }
-body  
-{ 
-    display:flex; 
-    justify-content:center; 
-    padding:2rem; 
-    background:#f4f6fa;
- }
-.container 
-{ 
-    width:100%; 
-    max-width:420px; 
+body {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: #f4f6fa;
 }
-form 
-{ 
-    display:flex; 
-    gap:0.5rem; 
-    margin-bottom:1rem; 
+.container {
+  width: 100%;
+  max-width: 420px;
 }
-input 
-{ 
-    flex:1; 
-    padding:0.6rem; 
-    border:1px solid #ccc; 
-    border-radius:6px; 
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
-button 
-{ 
-    padding:0 1rem; border:none; border-radius:6px; background:#1e88e5; color:#fff; cursor:pointer; 
+input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
-ul 
-{ 
-    list-style:none; padding:0; 
+button {
+  padding: 0 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #1e88e5;
+  color: #fff;
+  cursor: pointer;
 }
-li 
-{ 
-    padding:0.6rem; display:flex; justify-content:space-between; align-items:center; background:#fff; border:1px solid #e0e0e0; border-radius:6px; margin-bottom:0.5rem; 
+ul {
+  list-style: none;
+  padding: 0;
 }
-li.completed span 
-{ 
-    text-decoration: line-through; color:#757575; 
+li {
+  padding: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
 }
-.delete-btn 
-{ 
-    background:none; border:none; font-size:1.1rem; cursor:pointer; color:#e53935; 
+li.completed span {
+  text-decoration: line-through;
+  color: #757575;
+}
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #e53935;
 }
 /* styles.css */
 .sr-only {
-    position:absolute;
-    left:-9999px; width:1px; height:1px;
-    overflow:hidden;
-  }
-  button:focus,
-  input:focus {
-    outline:3px solid #1e88e5; /* visible focus ring */
-  }
-  #empty-state 
-  { 
-    color:#555; text-align:center; margin-top:1rem; 
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
-  .hidden       
-  { 
-    display:none; 
+button:focus,
+input:focus {
+  outline: 3px solid #1e88e5; /* visible focus ring */
 }
-  .filters 
-  {
-    display:flex; gap:.3rem; margin:.5rem 0 1rem;
-  }
-  .filters button
-   {
-    flex:1; padding:.4rem; border:none; border-radius:6px;
-    background:#e0e0e0; cursor:pointer;
-  }
-  .filters .active   
-  { 
-    background:#1e88e5; color:#fff; 
+#empty-state {
+  color: #555;
+  text-align: center;
+  margin-top: 1rem;
 }
-      
+.hidden {
+  display: none;
+}
+.filters {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0.5rem 0 1rem;
+}
+.filters button {
+  flex: 1;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 6px;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+.filters .active {
+  background: #1e88e5;
+  color: #fff;
+}
+:root {
+  --bg: #f4f6fa;
+  --card: #fff;
+  --text: #111;
+  --primary: #1e88e5;
+}
+
+/* dark overrides */
+[data-theme="dark"] {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #eee;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+button {
+  background: var(--primary);
+}
+li {
+  background: var(--card);
+}
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
